@@ -21,13 +21,11 @@ public class App {
 		em.persist(t3);
 		em.getTransaction().commit();
 		
-//		Titular t = em.find(Titular.class, 111); // Encontrando Titular de CPF "111".
-//		Titular t2 = em.find(Titular.class, 222); // Encontrando Titular de CPF "111".
-//		Titular t3 = em.find(Titular.class, 333); // Encontrando Titular de CPF "111".
+		Titular titular = em.find(Titular.class, 111); // Encontrando Titular de CPF "111".
 		
-//		em.getTransaction().begin();
-//		em.remove(t1);
-//		em.getTransaction().commit();
+		em.getTransaction().begin();
+		em.remove(titular);
+		em.getTransaction().commit();
 		
 //		System.out.println(t);
 		
